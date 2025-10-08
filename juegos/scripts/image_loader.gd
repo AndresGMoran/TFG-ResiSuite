@@ -1,0 +1,63 @@
+extends Node
+
+static func get_all_animal_shadow_images() -> Array[Texture2D]:
+	return [
+		preload("res://images/emparejar_las_sombras/avestruz_sombra.png"),
+		preload("res://images/emparejar_las_sombras/caballo_sombra.png"),
+		preload("res://images/emparejar_las_sombras/cangrejo_sombra.png"),
+		preload("res://images/emparejar_las_sombras/cerdo_sombra.png"),
+		preload("res://images/emparejar_las_sombras/cocodrilo_sombra.png"),
+		preload("res://images/emparejar_las_sombras/dinosaurio_sombra.png"),
+		preload("res://images/emparejar_las_sombras/elefante_sombra.png"),
+		preload("res://images/emparejar_las_sombras/gallina_sombra.png"),
+		preload("res://images/emparejar_las_sombras/gamba_sombra.png"),
+		preload("res://images/emparejar_las_sombras/hipopotamo_sombra.png"),
+		preload("res://images/emparejar_las_sombras/jirafa_sombra.png"),
+		preload("res://images/emparejar_las_sombras/mariposa_sombra.png"),
+		preload("res://images/emparejar_las_sombras/mono_sombra.png"),
+		preload("res://images/emparejar_las_sombras/oso_sombra.png"),
+		preload("res://images/emparejar_las_sombras/oveja_sombra.png"),
+		preload("res://images/emparejar_las_sombras/pajaro_sombra.png"),
+		preload("res://images/emparejar_las_sombras/paloma_sombra.png"),
+		preload("res://images/emparejar_las_sombras/pato_sombra.png"),
+		preload("res://images/emparejar_las_sombras/perro_sombra.png"),
+		preload("res://images/emparejar_las_sombras/pez_sombra.png"),
+		preload("res://images/emparejar_las_sombras/pulpo_sombra.png"),
+		preload("res://images/emparejar_las_sombras/rinoceronte_sombra.png"),
+		preload("res://images/emparejar_las_sombras/serpiente_sombra.png"),
+		preload("res://images/emparejar_las_sombras/tigre_sombra.png"),
+		preload("res://images/emparejar_las_sombras/tortuga_sombra.png"),
+		preload("res://images/emparejar_las_sombras/vaca_sombra.png"),
+		preload("res://images/emparejar_las_sombras/zorro_sombra.png")
+	]
+	
+static func get_all_animal_color_images() -> Dictionary:
+	return {
+		"avestruz": preload("res://images/emparejar_las_sombras/avestruz_color.png"),
+		"caballo": preload("res://images/emparejar_las_sombras/caballo_color.png"),
+		"cangrejo": preload("res://images/emparejar_las_sombras/cangrejo_color.png"),
+		"cerdo": preload("res://images/emparejar_las_sombras/cerdo_color.png"),
+		"cocodrilo": preload("res://images/emparejar_las_sombras/cocodrilo_color.png"),
+		"dinosaurio": preload("res://images/emparejar_las_sombras/dinosaurio_color.png"),
+		"elefante": preload("res://images/emparejar_las_sombras/elefante_color.png"),
+		"gallina": preload("res://images/emparejar_las_sombras/gallina_color.png"),
+		"gamba": preload("res://images/emparejar_las_sombras/gamba_color.png"),
+		"hipopotamo": preload("res://images/emparejar_las_sombras/hipopotamo_color.png"),
+		"jirafa": preload("res://images/emparejar_las_sombras/jirafa_color.png"),
+		"mariposa": preload("res://images/emparejar_las_sombras/mariposa_color.png"),
+		"mono": preload("res://images/emparejar_las_sombras/mono_color.png"),
+		"oso": preload("res://images/emparejar_las_sombras/oso_color.png"),
+		"oveja": preload("res://images/emparejar_las_sombras/oveja_color.png"),
+		"pajaro": preload("res://images/emparejar_las_sombras/pajaro_color.png"),
+		"paloma": preload("res://images/emparejar_las_sombras/paloma_color.png"),
+		"pato": preload("res://images/emparejar_las_sombras/pato_color.png"),
+		"perro": preload("res://images/emparejar_las_sombras/perro_color.png"),
+		"pez": preload("res://images/emparejar_las_sombras/pez_color.png"),
+		"pulpo": preload("res://images/emparejar_las_sombras/pulpo_color.png"),
+		"rinoceronte": preload("res://images/emparejar_las_sombras/rinoceronte_color.png"),
+		"serpiente": preload("res://images/emparejar_las_sombras/serpiente_color.png"),
+		"tigre": preload("res://images/emparejar_las_sombras/tigre_color.png"),
+		"tortuga": preload("res://images/emparejar_las_sombras/tortuga_color.png"),
+		"vaca": preload("res://images/emparejar_las_sombras/vaca_color.png"),
+		"zorro": preload("res://images/emparejar_las_sombras/zorro_color.png")
+	}

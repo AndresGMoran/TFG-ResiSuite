@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adminScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/adminContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Repetiremos esta estructura para cada acción -->
+        <include layout="@layout/item_admin_action" android:id="@+id/action_add_residencia" />
+        <include layout="@layout/item_admin_action" android:id="@+id/action_delete_residencia" />
+        <include layout="@layout/item_admin_action" android:id="@+id/action_add_user" />
+        <include layout="@layout/item_admin_action" android:id="@+id/action_delete_user" />
+        <include layout="@layout/item_admin_action" android:id="@+id/action_add_resident" />
+        <include layout="@layout/item_admin_action" android:id="@+id/action_delete_resident" />
+        <include layout="@layout/item_admin_action" android:id="@+id/action_add_game" />
+        <include layout="@layout/item_admin_action" android:id="@+id/action_delete_game" />
+
+        <!-- Botón de cerrar sesión -->
+        <Button
+            android:id="@+id/btn_logout_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Cerrar sesión"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

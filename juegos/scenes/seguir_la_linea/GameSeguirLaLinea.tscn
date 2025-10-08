@@ -1,0 +1,237 @@
+[gd_scene load_steps=10 format=3 uid="uid://bd2esux57kwcc"]
+
+[ext_resource type="Script" uid="uid://cf24sqa5714px" path="res://scripts/seguir_la_linea/game_seguir_la_linea.gd" id="1_glvar"]
+[ext_resource type="Texture2D" uid="uid://cncae337c0ws8" path="res://images/menu_logo.png" id="2_5nobq"]
+[ext_resource type="Theme" uid="uid://dqrjftnev4ftw" path="res://styles/menu.tres" id="2_qqgne"]
+[ext_resource type="Texture2D" uid="uid://cykbo7qv3fy6l" path="res://images/play-button.png" id="3_m5c6w"]
+[ext_resource type="Texture2D" uid="uid://t6vfbi66g6fy" path="res://images/charecter.png" id="4_032yw"]
+[ext_resource type="AudioStream" uid="uid://cwudtop42vbi8" path="res://audios/instrucciones_seguir_la_linea.mp3" id="4_a6ugw"]
+[ext_resource type="Texture2D" uid="uid://354a75edxicg" path="res://assets/sign in window/window.png" id="4_dj0dm"]
+[ext_resource type="Texture2D" uid="uid://dk8i5somirvt2" path="res://images/cuadro de texto.png" id="5_dj0dm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_glvar")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_qqgne")
+icon = ExtResource("2_5nobq")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("3_m5c6w")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ShapeArea" type="Area2D" parent="MarginContainer/VBoxContainer/Control"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MarginContainer/VBoxContainer/Control/ShapeArea"]
+
+[node name="ShapeLine" type="Line2D" parent="MarginContainer/VBoxContainer/Control"]
+
+[node name="Tracker" type="Area2D" parent="MarginContainer/VBoxContainer/Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/VBoxContainer/Control/Tracker"]
+
+[node name="EndOfShapesWindow" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+initial_position = 1
+size = Vector2i(600, 200)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="EndOfShapesWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dj0dm")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EndOfShapesWindow"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="EndOfShapesWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Ya no quedan formas disponibles"
+
+[node name="Button" type="Button" parent="EndOfShapesWindow/VBoxContainer"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnu2h")
+text = "Aceptar"
+
+[node name="ExitButtonWindow" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+initial_position = 1
+size = Vector2i(600, 200)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="ExitButtonWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dj0dm")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitButtonWindow"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "No se guardaran los datos de la forma actual"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfirmExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnu2h")
+text = "Aceptar"
+
+[node name="DontExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnu2h")
+text = "Cancelar"
+
+[node name="Blocker" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.309804, 0.368627, 0.784314)
+
+[node name="Charecter" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -500.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_032yw")
+
+[node name="TextBallon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -850.0
+offset_bottom = 619.0
+grow_horizontal = 0
+texture = ExtResource("5_dj0dm")
+
+[node name="Label" type="Label" parent="TextBallon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -256.5
+offset_right = 378.0
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Por favor, siga la línea con el dedo hasta completar la forma."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_a6ugw")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_next_shape_pressed"]
+[connection signal="pressed" from="EndOfShapesWindow/VBoxContainer/Button" to="." method="_on_end_of_game_button"]

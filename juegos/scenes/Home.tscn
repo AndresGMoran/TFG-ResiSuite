@@ -1,0 +1,1273 @@
+[gd_scene load_steps=36 format=3 uid="uid://ghtnukfjtv5j"]
+
+[ext_resource type="Script" uid="uid://cmbsedaebmtix" path="res://scripts/home.gd" id="1_d52sk"]
+[ext_resource type="FontFile" uid="uid://b1uof5qtp3k85" path="res://styles/HollowSpace.ttf" id="2_1idv1"]
+[ext_resource type="Texture2D" uid="uid://c1qlub6rv4e3t" path="res://assets/window3.png" id="2_svoro"]
+[ext_resource type="Texture2D" uid="uid://cf7av4f8nqhry" path="res://images/logos/logo_emparejar_las_sombras.png" id="3_dch01"]
+[ext_resource type="Texture2D" uid="uid://354a75edxicg" path="res://assets/sign in window/window.png" id="3_nqr1n"]
+[ext_resource type="Texture2D" uid="uid://b6rjf3c85rxdf" path="res://images/logos/logo_seguir_la_linea.png" id="4_1idv1"]
+[ext_resource type="Script" uid="uid://dpxdt6wxr63gn" path="res://scripts/flecha_y_reacciona/configuration_f_y_r.gd" id="4_72wqp"]
+[ext_resource type="Script" uid="uid://e41ws6j00o5" path="res://scripts/bingo_auditivo/configuration_bingo.gd" id="5_72wqp"]
+[ext_resource type="Theme" uid="uid://dqrjftnev4ftw" path="res://styles/menu.tres" id="5_fs62j"]
+[ext_resource type="Texture2D" uid="uid://bvh382qlwuvtq" path="res://images/logos/logo_gimnasio.png" id="5_n4517"]
+[ext_resource type="Texture2D" uid="uid://dc6jx3u2rnpqx" path="res://images/logos/logo_bingo_auditivo.png" id="6_x0wfn"]
+[ext_resource type="Script" uid="uid://dim5arrthe0t4" path="res://scripts/gimnasio/configuration_gym.gd" id="6_yk4sq"]
+[ext_resource type="Script" uid="uid://rcrqfnlhe4bb" path="res://scripts/seguir_la_linea/configuration_seguir_la_linea.gd" id="7_66mx0"]
+[ext_resource type="Texture2D" uid="uid://b684a3o1ibj5i" path="res://images/logos/logo_flecha_y_reacciona.png" id="7_va03u"]
+[ext_resource type="Script" uid="uid://ctge47k34s7yi" path="res://scripts/emparejar_las_sombras/configuration_emparejar_las_sombras.gd" id="8_p3505"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk4sq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72wqp"]
+bg_color = Color(0, 0.384314, 1, 0)
+border_color = Color(0, 0.384314, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d52sk"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqr1n"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svoro"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66mx0"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3505"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs62j"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23ovu"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlk18"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa5vk"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5c8i"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dch01"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1idv1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4517"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1idv1"]
+bg_color = Color(0.926244, 0.000504314, 0.000275693, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0wfn"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va03u"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biiq1"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6g2ad"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d52sk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.921569, 0.231373, 1)
+theme_override_colors/font_outline_color = Color(0.290196, 0.0784314, 0.54902, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_1idv1")
+theme_override_font_sizes/font_size = 150
+text = "RESI GAMES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlowContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk4sq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/FlowContainer/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 420.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_svoro")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/FlowContainer/Button/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -172.0
+offset_top = -76.1242
+offset_right = 184.0
+offset_bottom = -7.12424
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_72wqp")
+text = "Emparejar las sombras"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button/VBoxContainer/TextureRect"]
+layout_mode = 2
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 324.0
+offset_bottom = 313.0
+texture = ExtResource("3_dch01")
+expand_mode = 3
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk4sq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/FlowContainer/Button2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 421.0
+grow_horizontal = 2
+theme_override_constants/separation = -1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_svoro")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/FlowContainer/Button2/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.5
+offset_top = -75.2298
+offset_right = 184.5
+offset_bottom = -6.22983
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_72wqp")
+text = "Seguir la línea"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button2/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 324.0
+offset_bottom = 313.0
+texture = ExtResource("4_1idv1")
+expand_mode = 3
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk4sq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/FlowContainer/Button3"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 421.0
+grow_horizontal = 2
+theme_override_constants/separation = -1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button3/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_svoro")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/FlowContainer/Button3/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.5
+offset_top = -75.2298
+offset_right = 182.5
+offset_bottom = -7.22983
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_72wqp")
+text = "Gimnasio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button3/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 324.0
+offset_bottom = 313.0
+texture = ExtResource("5_n4517")
+expand_mode = 3
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk4sq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/FlowContainer/Button4"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 421.0
+grow_horizontal = 2
+theme_override_constants/separation = -1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button4/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_svoro")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/FlowContainer/Button4/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.5
+offset_top = -75.2298
+offset_right = 184.5
+offset_bottom = -7.22983
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_72wqp")
+text = "Bingo auditivo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button4/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 324.0
+offset_bottom = 313.0
+texture = ExtResource("6_x0wfn")
+expand_mode = 3
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk4sq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/FlowContainer/Button5"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 195.0
+grow_horizontal = 2
+theme_override_constants/separation = -1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button5/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_svoro")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/FlowContainer/Button5/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.5
+offset_top = -74.2298
+offset_right = 184.5
+offset_bottom = -8.22983
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_72wqp")
+text = "Flecha y reacciona"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/FlowContainer/Button5/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 324.0
+offset_bottom = 313.0
+texture = ExtResource("7_va03u")
+expand_mode = 3
+
+[node name="LogIn" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+title = "Iniciar sesion"
+initial_position = 2
+size = Vector2i(600, 300)
+visible = false
+borderless = true
+transparent = true
+
+[node name="ColorRect" type="TextureRect" parent="LogIn"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nqr1n")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LogIn"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -77.5
+offset_right = 72.0
+offset_bottom = 77.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="LogIn/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Correo electronico"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EmailInput" type="LineEdit" parent="LogIn/VBoxContainer"]
+custom_minimum_size = Vector2(500, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_d52sk")
+alignment = 1
+
+[node name="Label2" type="Label" parent="LogIn/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Contrseña"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PasswordInput" type="LineEdit" parent="LogIn/VBoxContainer"]
+custom_minimum_size = Vector2(500, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_nqr1n")
+alignment = 1
+secret = true
+
+[node name="LogInButton" type="Button" parent="LogIn/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_svoro")
+text = "Iniciar sesion"
+
+[node name="ConfigurationFYR" type="Window" parent="."]
+transparent_bg = true
+initial_position = 2
+size = Vector2i(1400, 1000)
+visible = false
+borderless = true
+transparent = true
+script = ExtResource("4_72wqp")
+
+[node name="TextureRect" type="TextureRect" parent="ConfigurationFYR"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nqr1n")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationFYR"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ConfigurationFYR/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationFYR/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label3" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_1idv1")
+theme_override_font_sizes/font_size = 90
+text = "CONFIGURACIÓN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelSelectPlayers" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona los jugadores"
+
+[node name="MenuButton" type="MenuButton" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("5_fs62j")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_66mx0")
+text = " Seleccionar jugador                                                                                                                                   "
+flat = false
+alignment = 0
+
+[node name="LabelPlayersSelected" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.987008, 0.992212, 0.995128, 1)
+theme_override_font_sizes/font_size = 20
+text = "Jugadores seleccionados(Para eliminar seleccione el jugador a eliminar)"
+
+[node name="FlowContainer" type="FlowContainer" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WarningLabel" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.987008, 0.992212, 0.995128, 1)
+text = "Selecciona al menos 1 jugador"
+
+[node name="Label" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.987008, 0.992212, 0.995128, 1)
+theme_override_font_sizes/font_size = 30
+text = "Inserte los segundos entre cambios de direccion"
+
+[node name="Seconds" type="LineEdit" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_p3505")
+
+[node name="Label2" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.987008, 0.992212, 0.995128, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el numero de direcciones"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Button2Directions" type="Button" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fs62j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_23ovu")
+toggle_mode = true
+text = "2"
+
+[node name="Button4Directions" type="Button" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mlk18")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wa5vk")
+toggle_mode = true
+text = "4"
+
+[node name="Button8Directions" type="Button" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x5c8i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dch01")
+toggle_mode = true
+text = "8"
+
+[node name="Label4" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.987008, 0.992212, 0.995128, 1)
+theme_override_font_sizes/font_size = 30
+text = "Dime el numero de objetos en cada dirección"
+
+[node name="RepeatsPerDirection" type="LineEdit" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_p3505")
+
+[node name="LabelSelectBgColor" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.987008, 0.992212, 0.995128, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el color de fondo"
+
+[node name="BackgroundColorPickerButton" type="ColorPickerButton" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = SubResource("ViewportTexture_1idv1")
+color = Color(1, 1, 1, 1)
+
+[node name="LabelArrowColor" type="Label" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.987008, 0.992212, 0.995128, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el color de la flecha"
+
+[node name="ArrowColorPickerButton" type="ColorPickerButton" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0.700514, 0, 0.0920325, 1)
+
+[node name="PlayButton" type="Button" parent="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_n4517")
+text = "EMPEZAR JUEGO"
+
+[node name="Button" type="Button" parent="ConfigurationFYR"]
+offset_left = 1306.0
+offset_top = 26.0
+offset_right = 1350.0
+offset_bottom = 66.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1idv1")
+text = "X"
+
+[node name="ConfigurationBingo" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+initial_position = 2
+size = Vector2i(1400, 1000)
+visible = false
+borderless = true
+transparent = true
+script = ExtResource("5_72wqp")
+
+[node name="TextureRect" type="TextureRect" parent="ConfigurationBingo"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nqr1n")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationBingo"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigurationBingo/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="ConfigurationBingo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_1idv1")
+theme_override_font_sizes/font_size = 90
+text = "CONFIGURACIÓN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ConfigurationBingo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona los jugadores"
+
+[node name="MenuButton" type="MenuButton" parent="ConfigurationBingo/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("5_fs62j")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_66mx0")
+text = "Seleccionar jugador                                                                                                                                   "
+flat = false
+alignment = 0
+
+[node name="Label3" type="Label" parent="ConfigurationBingo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Jugadores seleccionados"
+
+[node name="FlowContainer" type="FlowContainer" parent="ConfigurationBingo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WarningLabel" type="Label" parent="ConfigurationBingo/MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Selecciona al menos 1 jugador"
+
+[node name="PlayButton" type="Button" parent="ConfigurationBingo/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_x0wfn")
+text = "Empezar juego"
+
+[node name="Button" type="Button" parent="ConfigurationBingo"]
+offset_left = 1306.0
+offset_top = 26.0
+offset_right = 1350.0
+offset_bottom = 66.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1idv1")
+text = "X"
+
+[node name="ConfigurationGimnasio" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+initial_position = 2
+size = Vector2i(1400, 1000)
+visible = false
+borderless = true
+transparent = true
+script = ExtResource("6_yk4sq")
+
+[node name="TextureRect" type="TextureRect" parent="ConfigurationGimnasio"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nqr1n")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationGimnasio"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ConfigurationGimnasio/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_1idv1")
+theme_override_font_sizes/font_size = 90
+text = "CONFIGURACION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona los jugadores"
+
+[node name="PlayersMenu" type="MenuButton" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("5_fs62j")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_66mx0")
+text = " Seleccionar jugador                                                                                                                                   "
+flat = false
+alignment = 0
+
+[node name="Label3" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Jugadores seleccionados"
+
+[node name="FlowContainer" type="FlowContainer" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WarningLabel" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Selecciona al menos 1 jugador"
+
+[node name="Label4" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el ejercicio"
+
+[node name="Label5" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Facil"
+
+[node name="EasyContainer" type="HBoxContainer" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label6" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Medio"
+
+[node name="MediumContainer" type="HBoxContainer" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label7" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Dificil"
+
+[node name="HardContainer" type="HBoxContainer" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label8" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Ejercicios seleccionados(Orden)"
+
+[node name="FlowContainer2" type="FlowContainer" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExcercisesWarningLabel" type="Label" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/FlowContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Selecciona al menos 1 ejercicio"
+
+[node name="PlayButton" type="Button" parent="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_va03u")
+text = "Empezar juego"
+
+[node name="Button" type="Button" parent="ConfigurationGimnasio"]
+offset_left = 1306.0
+offset_top = 26.0
+offset_right = 1350.0
+offset_bottom = 66.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1idv1")
+text = "X"
+
+[node name="ConfigurationSeguirLaLinea" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+initial_position = 2
+size = Vector2i(1400, 1000)
+visible = false
+borderless = true
+transparent = true
+script = ExtResource("7_66mx0")
+
+[node name="TextureRect" type="TextureRect" parent="ConfigurationSeguirLaLinea"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nqr1n")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationSeguirLaLinea"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ConfigurationSeguirLaLinea/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label8" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_1idv1")
+theme_override_font_sizes/font_size = 90
+text = "CONFIGURACIÓN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Seleccionar jugador"
+vertical_alignment = 3
+
+[node name="PlayersMenu" type="MenuButton" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("5_fs62j")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_66mx0")
+text = "Seleccionar jugador"
+flat = false
+alignment = 0
+
+[node name="Label" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Seleccionar color de fondo"
+
+[node name="bg_color_picker" type="ColorPickerButton" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(1, 1, 1, 1)
+
+[node name="Label5" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Seleccionar formas"
+
+[node name="Label9" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Facil"
+
+[node name="EasyContainer" type="HBoxContainer" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label10" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Medio"
+
+[node name="MediumContainer" type="HBoxContainer" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label11" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Dificil"
+
+[node name="HardContainer" type="HBoxContainer" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Formas seleccionados(Orden)"
+
+[node name="FlowContainer" type="FlowContainer" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ShapesWarningLabel" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/FlowContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Selecciona al menos 1 ejercicio"
+
+[node name="Label2" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Seleccionar color de línea"
+
+[node name="line_color_picker" type="ColorPickerButton" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0, 0, 0.941176, 1)
+
+[node name="Label3" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Seleccionar tamaño de la forma"
+
+[node name="size_slider" type="HSlider" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+min_value = 0.1
+max_value = 0.6
+step = 0.1
+value = 0.5
+
+[node name="Label4" type="Label" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona grosor de la línea"
+
+[node name="width_slider" type="HSlider" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+min_value = 40.0
+max_value = 70.0
+value = 50.0
+
+[node name="play_button" type="Button" parent="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_biiq1")
+text = "INICAR JUEGO"
+
+[node name="Button" type="Button" parent="ConfigurationSeguirLaLinea"]
+offset_left = 1306.0
+offset_top = 26.0
+offset_right = 1350.0
+offset_bottom = 66.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1idv1")
+text = "X"
+
+[node name="ConfigurationoEmparejarLasSombras" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+initial_position = 2
+size = Vector2i(1400, 1000)
+visible = false
+borderless = true
+transparent = true
+script = ExtResource("8_p3505")
+
+[node name="TextureRect" type="TextureRect" parent="ConfigurationoEmparejarLasSombras"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nqr1n")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationoEmparejarLasSombras"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ConfigurationoEmparejarLasSombras/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label6" type="Label" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_1idv1")
+theme_override_font_sizes/font_size = 90
+text = "CONFIGURACIÓN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona un jugador"
+
+[node name="residents_menu" type="MenuButton" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("5_fs62j")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_66mx0")
+text = " Seleccionar jugador"
+flat = false
+alignment = 0
+
+[node name="Label5" type="Label" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el nivel"
+
+[node name="levels_menu" type="MenuButton" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("5_fs62j")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_66mx0")
+text = " Seleccionar nivel"
+flat = false
+alignment = 0
+item_count = 3
+popup/item_0/text = "Facil"
+popup/item_0/id = 0
+popup/item_1/text = "Medio"
+popup/item_1/id = 1
+popup/item_2/text = "Dificil"
+popup/item_2/id = 2
+
+[node name="Label2" type="Label" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el color de fondo"
+
+[node name="bg_color_picker" type="ColorPickerButton" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(1, 1, 1, 1)
+
+[node name="Label3" type="Label" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el color de las líneas de las fichas"
+
+[node name="tiles_lines_color_picker" type="ColorPickerButton" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color(0.976471, 0, 0, 1)
+
+[node name="Label4" type="Label" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Selecciona el color de las líneas del tablero"
+
+[node name="table_lines_color_picker" type="ColorPickerButton" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0, 0, 0.972549, 1)
+
+[node name="Button" type="Button" parent="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_6g2ad")
+text = "EMPEZAR JUEGO"
+
+[node name="Button" type="Button" parent="ConfigurationoEmparejarLasSombras"]
+offset_left = 1306.0
+offset_top = 26.0
+offset_right = 1350.0
+offset_bottom = 66.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1idv1")
+text = "X"
+
+[node name="Blocker" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.309804, 0.368627, 0.784314)
+
+[connection signal="pressed" from="LogIn/VBoxContainer/LogInButton" to="." method="_on_log_in_button_pressed"]
+[connection signal="pressed" from="ConfigurationFYR/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayButton" to="ConfigurationFYR" method="_on_play_button_pressed"]
+[connection signal="pressed" from="ConfigurationFYR/Button" to="ConfigurationFYR" method="_on_close_button_pressed"]
+[connection signal="pressed" from="ConfigurationBingo/MarginContainer/VBoxContainer/PlayButton" to="ConfigurationBingo" method="_on_play_button_pressed"]
+[connection signal="pressed" from="ConfigurationBingo/Button" to="ConfigurationBingo" method="_on_close_button_pressed"]
+[connection signal="pressed" from="ConfigurationGimnasio/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/PlayButton" to="ConfigurationGimnasio" method="_on_play_button_pressed"]
+[connection signal="pressed" from="ConfigurationGimnasio/Button" to="ConfigurationGimnasio" method="_on_close_button_pressed"]
+[connection signal="pressed" from="ConfigurationSeguirLaLinea/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/play_button" to="ConfigurationSeguirLaLinea" method="_on_play_button_pressed"]
+[connection signal="pressed" from="ConfigurationSeguirLaLinea/Button" to="ConfigurationSeguirLaLinea" method="_on_close_button_pressed"]
+[connection signal="pressed" from="ConfigurationoEmparejarLasSombras/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/Button" to="ConfigurationoEmparejarLasSombras" method="_on_play_button_pressed"]
+[connection signal="pressed" from="ConfigurationoEmparejarLasSombras/Button" to="ConfigurationoEmparejarLasSombras" method="_on_close_button_pressed"]

@@ -1,0 +1,273 @@
+[gd_scene load_steps=12 format=3 uid="uid://dcaquiy5tvss5"]
+
+[ext_resource type="Script" uid="uid://vsc3anuvlso6" path="res://scripts/emparejar_las_sombras/game_emparejar_las_sombras.gd" id="1_ibkli"]
+[ext_resource type="AudioStream" uid="uid://c8kq84p5btav8" path="res://audios/instrucciones_emparejar_las_sombras.mp3" id="2_qbsmt"]
+[ext_resource type="Texture2D" uid="uid://cncae337c0ws8" path="res://images/menu_logo.png" id="3_cpr0p"]
+[ext_resource type="Theme" uid="uid://dqrjftnev4ftw" path="res://styles/menu.tres" id="3_ht2f1"]
+[ext_resource type="Texture2D" uid="uid://t6vfbi66g6fy" path="res://images/charecter.png" id="4_0mim7"]
+[ext_resource type="Texture2D" uid="uid://354a75edxicg" path="res://assets/sign in window/window.png" id="4_gxns6"]
+[ext_resource type="Texture2D" uid="uid://dk8i5somirvt2" path="res://images/cuadro de texto.png" id="5_gxns6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cpr0p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpr0p"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78awf"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0nni"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ibkli")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qbsmt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuButton" type="MenuButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("3_ht2f1")
+icon = ExtResource("3_cpr0p")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="TilesLabel" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+text = "FICHAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TilesContainer" type="GridContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 3
+columns = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="BoardLabel" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+text = "TABLERO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameBoardContainer" type="Control" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GameBoard" type="PanelContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2/GameBoardContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cpr0p")
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2/GameBoardContainer/GameBoard"]
+layout_mode = 2
+columns = 5
+
+[node name="WinPopup" type="Window" parent="."]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(500, 200)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="WinPopup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gxns6")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinPopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -56.0
+offset_right = 46.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="victory_label" type="Label" parent="WinPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fail_count_label" type="Label" parent="WinPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit_endgame_button" type="Button" parent="WinPopup/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_cpr0p")
+text = "SALIR"
+
+[node name="ExitButtonWindow" type="Window" parent="."]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(600, 200)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="ExitButtonWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gxns6")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitButtonWindow"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "No se guardaran los datos de la partida"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfirmExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_78awf")
+text = "Aceptar"
+
+[node name="CancelExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0nni")
+text = "Cancelar"
+
+[node name="Blocker" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.309804, 0.368627, 0.784314)
+
+[node name="Charecter" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -500.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_0mim7")
+
+[node name="TextBallon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -850.0
+offset_bottom = 619.0
+grow_horizontal = 0
+texture = ExtResource("5_gxns6")
+
+[node name="Label" type="Label" parent="TextBallon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -256.5
+offset_right = 378.0
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Por favor, arrastra las fichas de animales
+que están a la izquierda hacia su sombra
+ correspondiente en el tablero de la derecha."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="WinPopup/VBoxContainer/exit_endgame_button" to="." method="_on_exit_button_pressed"]

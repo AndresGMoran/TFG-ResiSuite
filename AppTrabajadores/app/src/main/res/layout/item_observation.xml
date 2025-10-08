@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="0dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_image_observation"
+            android:layout_width="52dp"
+            android:layout_height="51dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircularShapeAppearance"
+            app:srcCompat="@drawable/woman_avatar" />
+
+        <TextView
+            android:id="@+id/observation_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:text="Person Name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Texto de la observación existente -->
+    <TextView
+        android:id="@+id/observation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Observation text"
+        android:visibility="gone" />
+
+    <!-- Campo de texto si no hay observación -->
+    <EditText
+        android:id="@+id/observation_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Escribe una observación..."
+        android:inputType="textMultiLine"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/add_observation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#324F5E"
+        android:text="Subir observación"
+        android:visibility="invisible" />
+</LinearLayout>

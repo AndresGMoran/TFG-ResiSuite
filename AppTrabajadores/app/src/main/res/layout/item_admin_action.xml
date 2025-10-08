@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acción"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="#E0E0E0"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:background="#F5F5F5">
+
+        <Spinner
+            android:id="@+id/spinner_residencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spinner_extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Contenedor datos residencia -->
+        <LinearLayout
+            android:id="@+id/layout_residence_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/residence_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre" />
+
+            <EditText
+                android:id="@+id/residence_email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_user_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_add_user_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre" />
+
+            <EditText
+                android:id="@+id/et_add_user_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electronico" />
+
+            <EditText
+                android:id="@+id/et_add_user_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_user_verfication_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Codigo verificacion"
+                android:layout_marginTop="12dp" />
+
+
+
+        </LinearLayout>
+
+        <!-- Contenedor datos residente -->
+        <LinearLayout
+            android:id="@+id/layout_resident_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_add_resident_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_text"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_add_resident_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/surnames_text"
+                android:inputType="textPersonName"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_resident_fecha_nacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_of_birth_text"
+                android:inputType="date"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_resident_documento_identidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/identification_document_text"
+                android:inputType="text"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_resident_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/year_of_document_validity_text"
+                android:inputType="number"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_resident_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/month_of_document_validity_text"
+                android:inputType="number"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_resident_familiar_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_family_member_text"
+                android:inputType="textPersonName"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/et_add_resident_familiar_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_family_member_text"
+                android:inputType="textPersonName"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+
+        <!-- Contenedor datos juego -->
+
+        <LinearLayout
+            android:id="@+id/layout_game_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_add_game_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_text" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_execute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejecutar" />
+    </LinearLayout>
+</LinearLayout>

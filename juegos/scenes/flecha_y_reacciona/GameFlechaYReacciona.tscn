@@ -1,0 +1,221 @@
+[gd_scene load_steps=12 format=3 uid="uid://650dmwxno0oh"]
+
+[ext_resource type="Script" uid="uid://dlc5nmf2nugla" path="res://scripts/flecha_y_reacciona/game_flecha_y_reacciona.gd" id="1_5mtkf"]
+[ext_resource type="AudioStream" uid="uid://msfckci5lndd" path="res://audios/instrucctions_flecha_y_reacciona.mp3" id="2_i6sun"]
+[ext_resource type="Theme" uid="uid://dqrjftnev4ftw" path="res://styles/menu.tres" id="3_2qe7s"]
+[ext_resource type="Texture2D" uid="uid://cncae337c0ws8" path="res://images/menu_logo.png" id="3_upeg7"]
+[ext_resource type="Texture2D" uid="uid://354a75edxicg" path="res://assets/sign in window/window.png" id="4_rdv23"]
+[ext_resource type="Texture2D" uid="uid://t6vfbi66g6fy" path="res://images/charecter.png" id="4_yo87f"]
+[ext_resource type="Texture2D" uid="uid://dk8i5somirvt2" path="res://images/cuadro de texto.png" id="5_rdv23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqjtg"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5mtkf")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_i6sun")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuButton" type="MenuButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("3_2qe7s")
+icon = ExtResource("3_upeg7")
+
+[node name="WinnerSelector" type="Window" parent="."]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(500, 230)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="WinnerSelector"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rdv23")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinnerSelector"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -62.0
+offset_right = 225.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="WinnerSelector/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+text = "¿Quien a ganado?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuPlayers" type="MenuButton" parent="WinnerSelector/VBoxContainer"]
+custom_minimum_size = Vector2(450, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = ExtResource("3_2qe7s")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_uwrxv")
+text = "Jugadores                                                                                🡣"
+flat = false
+
+[node name="Button" type="Button" parent="WinnerSelector/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqjtg")
+text = "Finalizar partida"
+
+[node name="ExitButtonWindow" type="Window" parent="."]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(600, 200)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="ExitButtonWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rdv23")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitButtonWindow"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_font_sizes/font_size = 25
+text = "No se guardaran los datos de la partida"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfirmExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnu2h")
+text = "Aceptar"
+
+[node name="CancelExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_lbhrr")
+text = "Cancelar"
+
+[node name="Blocker" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.309804, 0.368627, 0.784314)
+
+[node name="Charecter" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -500.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_yo87f")
+
+[node name="TextBallon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -850.0
+offset_bottom = 619.0
+grow_horizontal = 0
+texture = ExtResource("5_rdv23")
+
+[node name="Label" type="Label" parent="TextBallon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -256.5
+offset_right = 378.0
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Por favor, cuando la flecha apunte a un lado, tendrás
+que coger el objeto que esté en esa dirección.
+ Presta atención y actúa rápido."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="WinnerSelector/VBoxContainer/Button" to="." method="_on_winner_button_pressed"]

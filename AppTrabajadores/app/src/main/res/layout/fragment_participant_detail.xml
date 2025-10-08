@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh_participant_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_participant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Banner del participante -->
+                <include
+                    android:id="@+id/participant_card_view"
+                    layout="@layout/item_person_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Sección Información -->
+                <TextView
+                    android:id="@+id/label_information"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:text="@string/information_title"
+                    android:textColor="#324F5E"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/participant_card_view" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/info_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="#CCCCCC"
+                    app:layout_constraintTop_toBottomOf="@id/label_information"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/label_activity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_text"
+                        android:textColor="#2C3E50"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_semibold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_activity_participant" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_participant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2C3E50"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_semibold"
+                        app:layout_constraintTop_toTopOf="@id/label_activity"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label_ayuda_material"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/material_assistance_needed_text"
+                        android:textColor="#2C3E50"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_semibold"
+                        app:layout_constraintTop_toBottomOf="@id/label_activity"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_need_material_help_participant_detail" />
+
+                    <TextView
+                        android:id="@+id/tv_need_material_help_participant_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2C3E50"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_semibold"
+                        app:layout_constraintTop_toTopOf="@id/label_ayuda_material"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label_ayuda_humana"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/human_assistance_needed_text"
+                        android:textColor="#2C3E50"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_semibold"
+                        app:layout_constraintTop_toBottomOf="@id/label_ayuda_material"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_need_human_help_participant_detail" />
+
+                    <TextView
+                        android:id="@+id/tv_need_human_help_participant_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2C3E50"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/assistant_semibold"
+                        app:layout_constraintTop_toTopOf="@id/label_ayuda_humana"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Sección PreOpinion -->
+                <TextView
+                    android:id="@+id/label_preopinion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pre_opinion_title"
+                    android:textColor="#324F5E"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/assistant_semibold"
+                    app:layout_constraintTop_toBottomOf="@id/info_container"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_pre_opinion_participant_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:fontFamily="@font/assistant_semibold"
+                    app:layout_constraintTop_toBottomOf="@id/label_preopinion"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Sección PostOpinion -->
+                <TextView
+                    android:id="@+id/label_postopinion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post_opinion_title"
+                    android:textColor="#324F5E"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/assistant_semibold"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pre_opinion_participant_detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_post_opinion_participant_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:fontFamily="@font/assistant_semibold"
+                    app:layout_constraintTop_toBottomOf="@id/label_postopinion"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="32dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="#CCCCCC">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Banner azul -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/background_banner"
+                android:layout_width="0dp"
+                android:layout_height="174dp"
+                android:background="#0062FF"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- Botón superior izquierdo -->
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@null"
+                    app:srcCompat="@drawable/arrow_left"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Avatar + texto -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/woman_avatar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/back_button"
+                    app:shapeAppearanceOverlay="@style/CircularShapeAppearance" />
+
+                <TextView
+                    android:id="@+id/banner_name_game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="33dp"
+                    android:fontFamily="@font/assistant_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/game_image"
+                    app:layout_constraintStart_toEndOf="@+id/game_image"
+                    app:layout_constraintTop_toTopOf="@+id/game_image" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Título Información -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:text="@string/information_title"
+                android:textColor="#324F5E"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/background_banner" />
+
+            <!-- Contenedor de duración y fallos -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stats_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView2">
+
+                <!-- Duración -->
+                <TextView
+                    android:id="@+id/label_number_of_games_last_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:text="@string/last_games_list_title"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_number_of_games_last_week"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_number_of_games_last_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/label_number_of_games_last_week" />
+
+
+                <TextView
+                    android:id="@+id/label_total_games_played"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:text="@string/total_games_played_text"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_total_games_played"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_number_of_games_last_week" />
+
+                <TextView
+                    android:id="@+id/tv_total_games_played"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_total_games_played" />
+
+                <TextView
+                    android:id="@+id/label_top_jugador"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:text="@string/top_player_text"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_total_games_played"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_total_games_played" />
+
+                <TextView
+                    android:id="@+id/tv_top_jugador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:textColor="#2C3E50"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_top_jugador" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFFFF"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:text="@string/games_played_text"
+                android:textColor="#324F5E"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stats_container" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_game_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView6" />
+
+            <TextView
+                android:id="@+id/tv_lastgames_empty_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/no_games_played_text"
+                android:textColor="#96A7AF"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

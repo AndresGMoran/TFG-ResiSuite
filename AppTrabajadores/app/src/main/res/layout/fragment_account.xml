@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC">
+
+    <!-- Tarjeta de usuario -->
+    <include
+        android:id="@+id/account_card_view"
+        layout="@layout/item_person_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Sección de destacados -->
+    <TextView
+        android:id="@+id/label_highlights"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF"
+        android:fontFamily="@font/assistant_semibold"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/featured_title"
+        android:textSize="18sp"
+        android:textColor="#324F5E"
+        app:layout_constraintTop_toBottomOf="@id/account_card_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/residence_button_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/assistant_bold"
+        android:paddingStart="20dp"
+        android:text="@string/residence_title"
+        android:textAllCaps="false"
+        android:textColor="#324F5E"
+        app:layout_constraintTop_toBottomOf="@id/label_highlights"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Preferencias -->
+    <TextView
+        android:id="@+id/label_preferences"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="@string/preferences_title"
+        android:textColor="#324F5E"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/residence_button_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón idioma -->
+    <Button
+        android:id="@+id/btn_idioma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/assistant_bold"
+        android:paddingStart="20dp"
+        android:text="@string/language_title"
+        android:textAllCaps="false"
+        android:textColor="#324F5E"
+        app:layout_constraintTop_toBottomOf="@id/label_preferences"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón para desplegar cambio de contraseña -->
+    <Button
+        android:id="@+id/btn_toggle_password_change"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/assistant_bold"
+        android:paddingStart="20dp"
+        android:text="Cambiar contraseña"
+        android:textAllCaps="false"
+        android:textColor="#324F5E"
+        app:layout_constraintTop_toBottomOf="@id/btn_idioma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Layout oculto inicialmente para cambio de contraseña -->
+    <LinearLayout
+        android:id="@+id/password_change_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btn_toggle_password_change"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/et_current_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña actual"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/et_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nueva contraseña"
+            android:inputType="textPassword"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#324F5E"
+            android:text="Cambiar contraseña"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Botón cerrar sesión -->
+    <Button
+        android:id="@+id/btn_cerrar_sesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/assistant_bold"
+        android:paddingStart="20dp"
+        android:text="@string/logout_title"
+        android:textAllCaps="false"
+        android:textColor="#324F5E"
+        app:layout_constraintTop_toBottomOf="@id/password_change_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

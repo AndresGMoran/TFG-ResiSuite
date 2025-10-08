@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CircularShapeAppearance">
+        <item name="cornerFamily">rounded</item> <!-- Esquinas redondeadas -->
+        <item name="cornerSize">50%</item> <!-- 50% para hacerla circular -->
+    </style>
+
+    <style name="RoundedBottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="shapeAppearanceOverlay">@style/RoundedCorners</item>
+    </style>
+
+    <style name="RoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item> <!-- Ajusta el radio de la curva -->
+    </style>
+
+</resources>

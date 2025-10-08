@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.andresgmoran.apptrabajadores.ui.fragments.account.AccountFragment"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/lista"
+        android:name="com.andresgmoran.apptrabajadores.ui.fragments.residentList.ResidentsListFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_residents_list" />
+
+    <fragment
+        android:id="@+id/activities"
+        android:name="com.andresgmoran.apptrabajadores.ui.fragments.activities.ActivitiesFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_activities_list" />
+
+    <fragment
+        android:id="@+id/account"
+        android:name="com.andresgmoran.apptrabajadores.ui.fragments.account.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" />
+</navigation>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Imagen circular -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_resident_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircularShapeAppearance" />
+
+        <!-- Nombre -->
+
+        <TextView
+            android:id="@+id/tv_name_participant_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="156dp"
+            android:text="Jose Manuel Carrasco"
+            android:textColor="#324F5E"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintTop_toTopOf="@id/profile_image" />
+
+        <ImageButton
+            android:id="@+id/more_options_item_resident_activity"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            app:srcCompat="@drawable/elipsis"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/participant_asistencia_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/activity_button_unpressed_background"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_confirmation"
+            app:layout_constraintEnd_toStartOf="@id/participant_opinion_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_participant_item" />
+
+        <!-- Segundo botón -->
+        <ImageButton
+            android:id="@+id/participant_opinion_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo_text"
+            android:background="@drawable/activity_button_unpressed_background"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_participant_item"
+            app:layout_constraintStart_toEndOf="@id/participant_asistencia_button"
+            app:layout_constraintEnd_toStartOf="@id/participant_material_help_button"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Nuevo botón -->
+        <ImageButton
+            android:id="@+id/participant_material_help_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/activity_button_unpressed_background"
+            android:src="@drawable/logo_material_help"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_participant_item"
+            app:layout_constraintStart_toEndOf="@id/participant_opinion_button"
+            app:layout_constraintEnd_toStartOf="@id/participant_human_help_button"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Tercer botón -->
+        <ImageButton
+            android:id="@+id/participant_human_help_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/activity_button_unpressed_background"
+            android:src="@drawable/logo_human_help"
+            app:shapeAppearanceOverlay="@style/CircularShapeAppearance"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_participant_item"
+            app:layout_constraintStart_toEndOf="@id/participant_material_help_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

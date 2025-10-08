@@ -1,0 +1,364 @@
+[gd_scene load_steps=19 format=3 uid="uid://d01fc6i7gb4a7"]
+
+[ext_resource type="Script" uid="uid://dhqnf0xm2mwwm" path="res://scripts/bingo_auditivo/game_bingo.gd" id="1_db1r3"]
+[ext_resource type="Texture2D" uid="uid://c4g0gbifdm5fe" path="res://images/bingo_auditivo/background_bingo.png" id="2_hwci8"]
+[ext_resource type="Texture2D" uid="uid://cncae337c0ws8" path="res://images/menu_logo.png" id="3_cmy2l"]
+[ext_resource type="Texture2D" uid="uid://354a75edxicg" path="res://assets/sign in window/window.png" id="3_i70go"]
+[ext_resource type="Theme" uid="uid://dqrjftnev4ftw" path="res://styles/menu.tres" id="4_rs73t"]
+[ext_resource type="Texture2D" uid="uid://t6vfbi66g6fy" path="res://images/charecter.png" id="5_i70go"]
+[ext_resource type="Texture2D" uid="uid://dk8i5somirvt2" path="res://images/cuadro de texto.png" id="6_k18c1"]
+[ext_resource type="AudioStream" uid="uid://cpeiuq7umndvk" path="res://audios/instrucciones_bingo_auditivo.mp3" id="7_k18c1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0tnpc"]
+bg_color = Color(0.92549, 0.376471, 0.615686, 0.788235)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqjtg"]
+bg_color = Color(0.92549, 0.376471, 0.615686, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
+bg_color = Color(0, 0.718972, 0.352325, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
+bg_color = Color(0.901268, 0.463041, 0.139193, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtaks"]
+bg_color = Color(0.95158, 0.95158, 0.95158, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
+bg_color = Color(0.588235, 0.654902, 0.686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i70go"]
+bg_color = Color(0.926244, 0.000504314, 0.000275693, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5sy4"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
+bg_color = Color(0.196078, 0.309804, 0.368627, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_db1r3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("2_hwci8")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(1000, 420)
+layout_mode = 2
+
+[node name="NextSoundButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0tnpc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqjtg")
+text = "Reproducir sonido"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RepeatSoundButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnu2h")
+text = "Repetir sonido"
+
+[node name="EndOfGameButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_lbhrr")
+text = "Fin de partida"
+
+[node name="ColorRect" type="Panel" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
+
+[node name="FlowContainerHistory" type="FlowContainer" parent="CenterContainer/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="AnimalAudio" type="AudioStreamPlayer2D" parent="."]
+
+[node name="WinnerSelector" type="Window" parent="."]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(500, 200)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="WinnerSelector"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_i70go")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinnerSelector"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -56.0
+offset_right = 225.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="WinnerSelector/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "¿Quien a ganado?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuPlayers" type="MenuButton" parent="WinnerSelector/VBoxContainer"]
+custom_minimum_size = Vector2(450, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = ExtResource("4_rs73t")
+theme_override_colors/font_color = Color(0.196078, 0.309804, 0.368627, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_iywne")
+text = "Jugadores                                                                                   🡣"
+flat = false
+
+[node name="Button" type="Button" parent="WinnerSelector/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_p57ef")
+text = "Finalizar partida"
+
+[node name="Button" type="Button" parent="WinnerSelector"]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_i70go")
+text = "X"
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 72.0
+theme = ExtResource("4_rs73t")
+icon = ExtResource("3_cmy2l")
+
+[node name="Bloqueador" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.309804, 0.368627, 0.784314)
+
+[node name="ExitButtonWindow" type="Window" parent="."]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(600, 200)
+visible = false
+borderless = true
+transparent = true
+
+[node name="TextureRect" type="TextureRect" parent="ExitButtonWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_i70go")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitButtonWindow"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "No se guardaran los datos de la partida."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitButtonWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfirmExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_u5sy4")
+text = "Aceptar"
+
+[node name="CancelExitButton" type="Button" parent="ExitButtonWindow/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_gee14")
+text = "Cancelar"
+
+[node name="Charecter" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -500.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_i70go")
+
+[node name="TextBallon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -850.0
+offset_bottom = 619.0
+grow_horizontal = 0
+texture = ExtResource("6_k18c1")
+
+[node name="Label" type="Label" parent="TextBallon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -256.5
+offset_right = 378.0
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "A continuación, podrá reproducir sonidos de animales
+para que los jugadores rellenen sus papeletas hasta gritar
+¡BINGO!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_k18c1")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/NextSoundButton" to="." method="_on_next_sound_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RepeatSoundButton" to="." method="_on_repeat_sound_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/EndOfGameButton" to="." method="_on_end_of_game_button_pressed"]
+[connection signal="pressed" from="WinnerSelector/VBoxContainer/Button" to="." method="_on_winner_button_pressed"]
+[connection signal="pressed" from="WinnerSelector/Button" to="." method="_on_close_button_pressed"]
