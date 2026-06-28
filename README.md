@@ -1,6 +1,8 @@
 <div align="center">
 
-  # ResiSuite — App Trabajadores (ResiCare)
+  # ResiSuite: App Trabajadores · Juegos para residentes
+  
+  <img src="Presentacion y memoria/logo_resisuite.png" alt="ResiSuite Logo" width="300"/>
 
   Aplicación móvil Android para el personal de residencias geriátricas.  
   Gestión de residentes, actividades y seguimiento de partidas de **ResiGames**, todo en un único ecosistema digital.
